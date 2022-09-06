@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# React Redux Markdown Previewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Yayınlandı: https://fanciful-pony-5e0687.netlify.app/
 
-## Available Scripts
+## Açılış ekranı
+![markdownpreviewer](https://user-images.githubusercontent.com/36435160/188700560-9bfc297d-56ba-4987-ada2-afb98d263704.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## Redux useSelector ile sol tarafta yazılan metin çekilmektedir. mardown state ile sol tarafa yazılan metin markdown içerisine kaydedilmektedir. ishelp state butona tıklanma durumunu kontrol eder. counter state butonun tıklanınca açılması ve tekrar tıklanınca kapanması durumunu kontrol eder. text değiştiğinde useEffect dispatch aracılığıyla mardown verisi redux textmarked reducer ile karşılanır. counter 2 ye bölümünden kalan ile butonun açılıp kapanması kontrol edilir. butona tıklanınca redux reducer helpclick ile karşılanır
+![markdownpreviewer1](https://user-images.githubusercontent.com/36435160/188709579-769d76e5-302a-4f2b-bfb1-37fead4ae6c3.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## textarea içerisine yazılanlar setMarkdown ile markdown içerisine kaydedilir. Sağ taraftaki markdown olan kısım için ReactMarkDown kullanılmıştır. isHelp ile buton durumu kontrol edilir ona göre buttonClick ilgili buton gelir.
+![markdownpreviewer2](https://user-images.githubusercontent.com/36435160/188709633-4db24bed-8725-4c07-a46f-624af4c348cc.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## initial state input text burada tanımlanmıştır. helpdata içeriği butona tıklanınca yazılacak olan veridir. Reducer textmarked ile karşılanan veri input text içerisine kaydedilir. helpClick ile karşılanan kısımda input text içerisine helpdata yazılır burası butona tıklanınca gelinen yerdir. Kapatmak için tekrar butona tıklanınca closeHelpClick ile karşılanır ve input text boş kaydedilir.
+![markdownpreviewer3](https://user-images.githubusercontent.com/36435160/188709977-7194fe9e-2dc8-4d63-9869-2b5742d85ff0.png)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Redux store
+![markdownpreviewer4](https://user-images.githubusercontent.com/36435160/188710382-f9f0256b-f9a5-44fc-858d-31982a7a4205.png)
